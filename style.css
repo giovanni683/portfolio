@@ -15,8 +15,9 @@ body.dark-mode {
     color: #f7f7f7;
 }
 
-body.dark-mode header, body.dark-mode footer {
+body.dark-mode .site-header {
     background-color: #1a1a1a;
+    color: #f7f7f7;
 }
 
 body.dark-mode nav ul {
@@ -37,12 +38,28 @@ body.dark-mode a:hover {
 }
 
 /* Cabeçalho */
-header {
-    background-color: #444;
-    color: #ffffff;
+.site-header {
+    background-color: #ffffff;
     padding: 20px;
-    text-align: center;
-    border-bottom: 5px solid #8fbc8f;
+    border-bottom: 3px solid #8fbc8f;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-image {
+    width: 120px; /* ou outro valor que achar melhor */
+    height: auto;
+    border-radius: 50%; /* mantém a imagem redonda */
+    object-fit: cover;
+    border: 2px solid #8fbc8f; /* borda opcional */
+}
+
+.header-text h1, .header-text p {
+    margin: 0;
 }
 
 /* Menu de Navegação */
@@ -72,7 +89,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Seções principais */
+/* Seções */
 section {
     margin: 20px auto;
     padding: 20px;
@@ -82,29 +99,15 @@ section {
     max-width: 800px;
 }
 
-/* Títulos das seções */
-section h2 {
-    color: #555;
-    border-bottom: 2px solid #8fbc8f;
-    padding-bottom: 5px;
-}
-
 /* Links */
 a {
     color: #8fbc8f;
     text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #6b8e23;
-    text-decoration: underline;
-}
-
-a i {
-    margin-right: 8px;
 }
 
 /* Barras de Progresso */
@@ -158,17 +161,19 @@ a i {
     background-color: #6b8e23;
 }
 
-/* Efeitos de Interação */
-button, a {
-    transition: all 0.3s ease;
-}
-
-button:active, a:active {
-    transform: scale(0.95);
-}
-
 /* Responsividade */
 @media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -176,13 +181,5 @@ button:active, a:active {
 
     nav ul li {
         margin: 5px 0;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .progress-bar {
-        height: 15px;
     }
 }
