@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanni Victor - Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Giovanni Victor Gonçalves da Silva Ramiro</h1>
+        <p>Java Developer & DevOps Specialist</p>
+        <p>Location: Osasco, São Paulo, Brazil</p>
+        <p>Contact: 
+            <a href="mailto:giovannivictorapril@hotmail.com">
+                <i class="fas fa-envelope"></i> giovannivictorapril@hotmail.com
+            </a> | 
+            <a href="https://www.linkedin.com/in/giovanni-victor-gon%C3%A7alves-da-silva-44a557187/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a> | 
+            <a href="https://github.com/giovanni683" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a> | 
+            <a href="tel:+5511991716287">
+                <i class="fas fa-phone"></i> +55 11 99171-6287
+            </a>
+        </p>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>Professional Objective</h2>
+        <p>Motivated Java and DevOps specialist with strong expertise in software development and a passion for creating scalable and efficient solutions. Currently pursuing a degree in Information Technology, I am driven to contribute to innovative projects, optimize processes, and deliver high-quality, impactful solutions through collaborative teamwork.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <h3>Civil Registry Office, First Subdistrict</h3>
+        <ul>
+            <li><strong>Technical Support Specialist</strong> - February 2023 to September 2024
+                <p>Provided technical support, collaborating closely with analysts to resolve system issues, managed website content and updates on WordPress, and worked with database tools like PGAdmin.</p>
+            </li>
+            <li><strong>Notarial Clerk</strong> - April 2017 to February 2023
+                <p>Delivered public assistance, conducted document analysis for notarial acts, maintained legal documentation, and processed public deeds with accuracy and care.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>AllBooks Project</strong>
+                <p>Description: A web application for managing books using Java and Spring Boot.</p>
+                <p>Technologies: <i class="fab fa-java"></i> Java, <i class="fab fa-spring"></i> Spring Boot, MySQL</p>
+                <a href="https://github.com/giovanni683/allbooks" target="_blank">View on GitHub</a>
+            </li>
+            <li>
+                <strong>New Spring Boot Project</strong>
+                <p>Description: A Spring Boot application showcasing new features and functionalities.</p>
+                <p>Technologies: <i class="fab fa-java"></i> Java, <i class="fab fa-spring"></i> Spring Boot</p>
+                <a href="https://github.com/giovanni683/new-springboot" target="_blank">View on GitHub</a>
+            </li>
+            <li>
+                <strong>Docker Project</strong>
+                <p>Description: A project utilizing Docker for containerization and deployment of applications.</p>
+                <p>Technologies: <i class="fab fa-docker"></i> Docker, DevOps</p>
+                <a href="https://github.com/giovanni683/meu_projeto_docker" target="_blank">View on GitHub</a>
+            </li>
+            <li>
+                <strong>ToDo Application</strong>
+                <p>Description: A simple to-do application for managing daily tasks.</p>
+                <p>Technologies: <i class="fab fa-js"></i> JavaScript, <i class="fab fa-node-js"></i> Node.js, Express</p>
+                <a href="https://github.com/giovanni683/todoapp" target="_blank">View on GitHub</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>Java</p>
+            <div class="progress-bar">
+                <div class="progress java"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Spring Boot</p>
+            <div class="progress-bar">
+                <div class="progress spring"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Docker</p>
+            <div class="progress-bar">
+                <div class="progress docker"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Node.js</p>
+            <div class="progress-bar">
+                <div class="progress node"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact: 
+            <a href="mailto:giovannivictorapril@hotmail.com">
+                <i class="fas fa-envelope"></i> giovannivictorapril@hotmail.com
+            </a> | 
+            <a href="https://www.linkedin.com/in/giovanni-victor-gon%C3%A7alves-da-silva-44a557187/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a> | 
+            <a href="https://github.com/giovanni683" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a> | 
+            <a href="tel:+5511991716287">
+                <i class="fas fa-phone"></i> +55 11 99171-6287
+            </a>
+        </p>
+    </footer>
+
+    <!-- Botão para alternar tema claro/escuro -->
+    <button id="theme-toggle">Toggle Theme</button>
+
+    <script>
+        // Script para alternar entre modo claro e escuro
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Script para animação de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
